@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
+import '../view/Select_User_Screen.dart';
 import '../view/splash_screen/SplashController.dart';
 import '../view/splash_screen/SplashScreen.dart';
 
@@ -8,6 +9,7 @@ import '../view/splash_screen/SplashScreen.dart';
 class RouteHelper{
 
   String splashscreen = "/Splashscreen";
+  String selectUserScreen = "/SelectUserScreen";
 
 
 
@@ -15,6 +17,7 @@ class RouteHelper{
 
 
   String getSplashscreen() => splashscreen;
+  String getSelectUserScreen() => selectUserScreen;
 
 
 
@@ -28,6 +31,8 @@ List<GetPage> get routes =>[
     binding: BindingsBuilder(
             () => Get.lazyPut<SplashController>(() => SplashController())),
   ),
+  GetPage(name: selectUserScreen, page: () => SafeArea(child: SelectUserScreen()),),
+
 
 ];
 

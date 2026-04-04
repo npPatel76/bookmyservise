@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../utils/RouteHelper.dart';
 import '../../utils/injection.dart';
 import '../../utils/local_storage.dart';
 
@@ -40,7 +41,7 @@ class SplashController extends GetxController
       if (isLogin) {
         //Get.offAllNamed(DI<RouteHelper>().getHomeTabScreen());
       } else {
-        //Get.offAllNamed(DI<RouteHelper>().getLoginScreen());
+        Get.offAllNamed(DI<RouteHelper>().getSelectUserScreen());
       }
     });
   }
